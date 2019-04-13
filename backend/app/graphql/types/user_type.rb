@@ -5,13 +5,7 @@ module Types
     field :id, ID, null: false
     field :name, String, null: false
     field :username, String, null: false
-    # field :payments, -> {[Types::PaymentType]}, null: false
-  end
-
-  class PaymentType < Types::BaseObject
-
-    field :recipient, ->{Types::UserType}, null: false
-    field :sender, ->{Types::UserType}, null: false
+    field :payments, Types::PaymentsType, null: false
   end
 
 end
