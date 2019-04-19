@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Payment.destroy_all
-user1 = User.find_or_create_by(id:1)
-user2 = User.find_or_create_by(id:2)
-user3 = User.find_or_create_by(id:3)
+# user1 = User.create email:"email1",password:"password"
+# user2 = User.create email:"email2",password:"password"
+# user3 = User.create email:"email3",password:"password"
 
 payment1 = Payment.create(sender_id: user1.id, recipient_id: user2.id, amount: 1.99)
 payment2 = Payment.create(sender_id: user2.id, recipient_id: user1.id, amount: 2.99)

@@ -1,11 +1,25 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update, :destroy]
+  before_action :set_user, only: [:index,:show, :update, :destroy]
 
   # GET /users
   def index
-    @users = User.all
+    render json: @user
+  end
 
-    render json: @users
+  # POST /login
+  def login
+
+    @user  = User.find_by email: user_login_params["email"]
+
+    unless @user
+      return render json: {error: "User not found"}
+    end
+
+    unless !@user.authenticate user_login_params["password"]
+      return render json: {user: @user, token: encode_token({user_id: @user.id})}
+    end
+
+    render json: {error: "incorrect email/password"}
   end
 
   # GET /users/1
@@ -41,7 +55,11 @@ class UsersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
-      @user = User.find(params[:id])
+      @user = current_user
+    end
+
+    def user_login_params
+      params.require(:user).permit(:email, :password)
     end
 
     # Only allow a trusted parameter "white list" through.
