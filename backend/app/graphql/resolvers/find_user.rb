@@ -2,11 +2,9 @@ module Resolvers
   class FindUser < Resolvers::Base
     type Types::UserType, null: false
 
-    argument :id , Int, required: true
-
-    def resolve(id: nil)
+    def resolve
       # call your application logic here:
-      User.find id
+      context[:current_user]
     end
   end
 end
