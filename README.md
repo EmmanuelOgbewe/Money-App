@@ -1,16 +1,8 @@
-# cash_app
+# Money-App
 
-A new Flutter project.
+This is a UI clone of the popular Cash App. 
 
-## Getting Started
+![IMG_1614](https://user-images.githubusercontent.com/29666179/58711143-dba18800-838b-11e9-8e78-1955d63f4e00.PNG)
+![IMG_1615](https://user-images.githubusercontent.com/29666179/58711142-dba18800-838b-11e9-90c6-119df4b7b857.PNG)
+![IMG_1613](https://user-images.githubusercontent.com/29666179/58711144-dba18800-838b-11e9-9b58-90fe4234d497.PNG)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
